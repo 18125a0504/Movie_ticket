@@ -1,0 +1,21 @@
+<div class="movie-container">
+    <form [formGroup]="ticketForm" (ngSubmit)="ticketUser()">
+        <label style="font-size: 1em;">Pick a movie:</label>
+        <select id="movie">
+            <option value="1">Spider-Man : Metaverse  </option>
+            <option value="2">Veer-Zara </option>
+            <option value="3"> Tadap</option>
+  </select>
+        <br><br>
+        <label>Select yout Seat</label>
+        <select id="seats">
+        <option value="1">Platinum (250₹) </option>
+        <option value="2">Economy (150₹)</option>
+      </select>
+        <br><br>
+        <label> Number of persons :</label>
+        <input type="text" placeholder="Enter persons in number" formControlName="persons">
+        <!-- <span *ngIf="persons && persons.invalid && persons.touched">This field is required</span> -->
+        <br><br><input type="submit" value="Purchase">
+    </form>
+</div>
